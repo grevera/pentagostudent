@@ -236,19 +236,7 @@ public class Pentago {
 
     /**
      * @todo v8: generally, two things are 'equals' when _everything_ is
-     * exactly the same. considerations:
-     *     1. assume that both boards are exactly the same.
-     *        assume that the game is over.
-     *        (who won matters, of course.)
-     *        does it matter whose turn it is?
-     *     2. assume that both boards are exactly the same.
-     *        assume that the game is over.
-     *        (who won matters, of course.)
-     *        do any of the 'last' variables matter (i.e., does the last move really matter)?
-     *     3. assume that both boards are exactly the same.
-     *        assume that the game is over.
-     *        (who won matters, of course.)
-     *        do any of the 'win' variables matter? (there may be more than one way to win.)
+     * exactly the same.
      */
     @Override public boolean equals ( Object o ) {
         Pentago p = (Pentago) o;
