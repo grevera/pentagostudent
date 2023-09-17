@@ -52,29 +52,36 @@ public class Pentago {
     /** who won? */
     public enum Winner { Black, White, Draw, None }
     //-----------------------------------------------------------------------
-    private Piece[][] board;  ///< game board with pieces
-    private boolean gameOver = false;  ///< is the game over?
+    /*
+     * all of the instance vars below should be private.
+     * they are made public for testing only.
+     * in general, getters (and possibly setters) should only be used instead.
+     * (i could/should use @PublicForTesting for each below but i don't want to
+     * be a pedant.)
+     */
+    public Piece[][] board;  ///< game board with pieces
+    public boolean gameOver = false;  ///< is the game over?
     /*
      * info for last move below (useful for GUI when playing against computer)
      */
-    private int lastCol;  ///< col of last piece placed
-    private Piece lastPiece;  ///< last piece placed
-    private Quadrant lastQuadrant;  ///< last quad selected
-    private int lastRow;  ///< row of last piece placed
-    private boolean lastWasPlacePiece;  ///< true = placePiece was called; false = one of rotates was called
-    private boolean lastWasRotateCW90;  ///< true = last rotate was rotateCW90; false = last rotate was rotateCCw90
+    public int lastCol;  ///< col of last piece placed
+    public Piece lastPiece;  ///< last piece placed
+    public Quadrant lastQuadrant;  ///< last quad selected
+    public int lastRow;  ///< row of last piece placed
+    public boolean lastWasPlacePiece;  ///< true = placePiece was called; false = one of rotates was called
+    public boolean lastWasRotateCW90;  ///< true = last rotate was rotateCW90; false = last rotate was rotateCCw90
 
-    private int quadSize;  ///< size / 2
-    private int size;  ///< board size. default is 6x6. should always be an even no.
-    private Turn turn = Turn.WhitePlacePiece;  ///< whose turn is it?
+    public int quadSize;  ///< size / 2
+    public int size;  ///< board size. default is 6x6. should always be an even no.
+    public Turn turn = Turn.WhitePlacePiece;  ///< whose turn is it?
     /*
      * info for winner (if any)
      */
-    private int winCol = -1;  ///< starting col of winner
-    private Compass winDir = Compass.None;  ///< direction of winner (from start)
-    private Winner winner = Winner.None;  ///< who won (including none yet and draw
-    private int winnerLength;  ///< required length for a winner (length of actual winner must be >= this)
-    private int winRow = -1;  ///< starting row of winner
+    public int winCol = -1;  ///< starting col of winner
+    public Compass winDir = Compass.None;  ///< direction of winner (from start)
+    public Winner winner = Winner.None;  ///< who won (including none yet and draw
+    public int winnerLength;  ///< required length for a winner (length of actual winner must be >= this)
+    public int winRow = -1;  ///< starting row of winner
     //-----------------------------------------------------------------------
     /** no arg ctor. default board size is 6x6, and winner length is 5. */
     public Pentago ( ) { init( 6, 5 ); }
