@@ -1,4 +1,7 @@
 doxydocs/
+src/test/*
+studentSolutions/*
+test*.py
 
 target/
 !.mvn/wrapper/maven-wrapper.jar

@@ -144,7 +144,7 @@ public class Pentago {
     public boolean getLastWasRotateCW90 ( ) { return false; }    ///< @todo v1: getter for lastWasRotateCW90
     public boolean getLastWasPlacePiece ( ) { return false; }    ///< @todo v1: getter for lastWasPlacePiece
     public int getSize ( ) { return -1; }    ///< @todo v1: getter for board size
-    public Turn getTurn ( ) { return this.turn; }    ///< @todo v1: getter for player's turn
+    public Turn getTurn ( ) { return null; }    ///< @todo v1: getter for player's turn
     public Winner getWinner ( ) { return null; }    ///< @todo v1: getter for winner
     public int getWinnerLength ( ) { return -1; }    ///< @todo v1: getter for min length for a winner
     public int getWinCol () { return -1; }    ///< @todo v1: getter for starting col of winner
