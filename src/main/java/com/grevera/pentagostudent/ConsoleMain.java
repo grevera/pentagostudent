@@ -43,6 +43,10 @@ public class ConsoleMain {
             //besides game over, the game has four states as defined by the
             // Turn enum.
             String who = "?";
+            if (b.getTurn() == null) {
+                System.err.println( "Exiting because Pentago.getTurn() returns null." );
+                System.exit( 0 );
+            }
             switch (b.getTurn()) {
                 case BlackPlacePiece, BlackRotate -> who = "black";
                 case WhitePlacePiece, WhiteRotate -> who = "white";

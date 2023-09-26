@@ -341,6 +341,10 @@ public class GUIView {
             return;
         }
 
+        if (ctrl.b.getTurn() == null) {
+            System.err.println( "Exiting because Pentago.getTurn() returns null." );
+            System.exit( 0 );
+        }
         switch (ctrl.b.getTurn()) {
             case BlackPlacePiece -> {
                 info.setText( "black to place piece" );
