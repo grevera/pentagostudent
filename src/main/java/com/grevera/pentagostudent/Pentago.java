@@ -2,6 +2,7 @@ package com.grevera.pentagostudent;
 
 import java.util.ArrayList;
 /**
+ * <pre>
  * pentago board game student version.
  * assignments (in order):
  *     1. getters
@@ -17,6 +18,7 @@ import java.util.ArrayList;
  *     11. getAllPossibleMoves
  *     12. isRotationOptional
  *     13. hashCode
+ * </pre>
  */
 public class Pentago {
     /*
@@ -179,6 +181,8 @@ public class Pentago {
     /**
      * @todo v4: can the piece be placed at the specified position?
      * do not actually place it there (or alter anything).
+     * @return true if, according to the rules, the given piece may be placed
+     * at the specified position; false otherwise.
      */
     public boolean canPlacePiece ( Piece p, int r, int c ) {
         return true;
@@ -187,8 +191,20 @@ public class Pentago {
     /**
      * @todo v4: place piece at the specified position (but make sure that it
      * can be placed their by first calling canPlacePiece).
-     * @sideeffect: don't forget to check for a winner, change to the other
-     * player's turn, and update the last move.
+     *
+     * @return true if, according to the rules, the given piece was placed
+     * at the specified position; false otherwise.
+     *
+     * @sideeffect don't forget to <pre>
+     *   (a) Check for a winner (by simply calling checkWinner() which has been
+     *   completed below for you). In a future assignment, you will be asked
+     *   to complete checkWinner(Piece p), a different function, that will
+     *   actually perform the check. (For now, the game will never actually end
+     *   as a result. But we need to check somewhere and that somewhere is
+     *   here.)
+     *   (b) Update the turn variable to the appropriate rotate value.
+     *   (c) Update the last move variables.
+     *   </pre>
      */
     public boolean placePiece ( Piece p, int r, int c ) { return true; }
 
