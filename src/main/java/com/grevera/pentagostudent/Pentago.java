@@ -246,7 +246,8 @@ public class Pentago {
     /**
      * @todo v5: check for a winner for the specified player.
      */
-    private boolean checkWinner ( Piece p ) { return false; }
+    @PublicForTesting( shouldBe="private" )
+    public boolean checkWinner ( Piece p ) { return false; }
 
     /**
      * @todo v11: especially at the beginning of the game, there may be rotations
