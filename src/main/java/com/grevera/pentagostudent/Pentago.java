@@ -212,13 +212,18 @@ public class Pentago {
 
     /**
      * @todo v6: rotate the specified quadrant clockwise by 90 degrees.
+     * @return true (like placePiece()) if rotate was successful/acceptable;
+     *         false otherwise. most of the time, it should be acceptable.
      * @sideeffect: after a successful rotate, one must check for a winner,
      * game over, board full, and update the last move.
      */
     public boolean rotateCW90 ( Quadrant q ) { return true; }
 
     /**
-     * @todo v7: rotate the specified quadrant counter/anti-clockwise by 90 degrees.
+     * @todo v7: rotate the specified quadrant counter/anti-clockwise by
+     * 90 degrees.
+     * @return true (like placePiece()) if rotate was successful/acceptable;
+     *         false otherwise. most of the time, it should be acceptable.
      * @sideeffect: after a successful rotate, one must check for a winner,
      * game over, board full, and update the last move.
      */
@@ -267,7 +272,9 @@ public class Pentago {
         return this.equals( p.board );
     }
 
-    /** @todo v8: @return true if the contents of both _boards_ (only) are exactly the same. */
+    /** @todo v8: @return true if the contents of both _boards_ (only) are
+     *  exactly the same; false otherwise.
+     */
     private boolean equals ( Piece[][] otherBoard ) {
         return false;
     }
@@ -277,7 +284,8 @@ public class Pentago {
 
     /**
      * @todo v2: ye olde toStringe methode.
-     * @return
+     * @return a string that represents the contents of the board as well
+     *         all of the other data in this instance.
      */
     @Override public String toString ( ) {
         String s = "";
@@ -286,3 +294,4 @@ public class Pentago {
     }
 
 }
+
